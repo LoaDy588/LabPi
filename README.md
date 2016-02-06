@@ -1,3 +1,2 @@
 # LabPi
-measurement system for Raspberry Pi
-mostly uses Adafruit products to work
+measurement system for Raspberry Pi. Currently work in progress.
