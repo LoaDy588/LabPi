@@ -1,6 +1,9 @@
 # LabPi
 measurement system for Raspberry Pi. Currently work in progress.
 
+
+-----------------
+
 Copyright (c) 2016, Oldřich Pecák
 All rights reserved.
 
