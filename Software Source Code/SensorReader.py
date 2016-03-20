@@ -2,6 +2,7 @@
 from Adafruit_ADS1x15 import ADS1x15
 from Adafruit_BMP085 import BMP085
 from Adafruit_TSL2561 import Adafruit_TSL2561
+from math import sqrt
 
 class SensorReader:
 
@@ -80,11 +81,7 @@ class SensorReader:
 
     #reads analog distance, requires proper channel
     def readDistance(self, channel):
-        if self._debug == True:
-            print "reading distance from channel:", channel
-        raw_distance = self.ADC.readADCSingleEnded(channel)
-        distance = raw_distance  #GET PROPER DATA INTERPRETATION
-        return distance
+        print "NOT FINISHED!!"
 
     #reads velocity interpreted from analog distance, requires proper channel
     def readVelocity(self, channel):
@@ -116,8 +113,12 @@ class SensorReader:
     
     #reads total accel interpreted from analog accel
     #requires proper channel setting
-    def ReadTotalAccel(self, channel_x, channel_y, channel_z):
-        print "NOT FINISHED!!"
+    def readTotalAccel(self, channel_x, channel_y, channel_z):
+        if self._debug == True:
+            print "reading total accel from channels:", channel_x, ",", channel_y, ",", channel_z
+        total_accel = sqrt((self.readXAccel(channel_x)**2)+(self.readYAccel(channel_y)**2)
+                           +(self.readZAccel(channel_z)**2))
+        return round(total_accel, 2)
 
     #reads analog temperature, requires proper channel
     def readAnalogTemp(self, channel):
