@@ -1,5 +1,6 @@
 # LabPi
-measurement system for Raspberry Pi. Currently work in progress.
+measurement system for Raspberry Pi.
+Developement stopped.
 
 
 -----------------
